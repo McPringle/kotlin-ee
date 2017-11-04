@@ -24,7 +24,7 @@ apply plugin: 'kotlin-noarg'
 apply plugin: 'war'
 
 buildscript {
-    ext.kotlin_version = '1.1.4-3'
+    ext.kotlin_version = '1.1.50'
     ext.javaee_version = '7.0'
 
     repositories {
