@@ -1,2 +1,2 @@
 FROM dockergarten/payara-micro
-COPY build/libs/timeservice.war ${DEPLOYMENT_DIR}
+COPY kobaltBuild/libs/timeservice.war ${DEPLOYMENT_DIR}
