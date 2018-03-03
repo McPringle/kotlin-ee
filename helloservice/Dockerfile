@@ -1,2 +1,2 @@
 FROM dockergarten/payara-micro
-COPY kobaltBuild/libs/helloservice.war ${DEPLOYMENT_DIR}
+COPY build/libs/helloservice.war ${DEPLOYMENT_DIR}

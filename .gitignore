@@ -1,5 +1,4 @@
-*.iml
+.gradle
 .idea
-.kobalt
-kobaltBuild
+build
 
