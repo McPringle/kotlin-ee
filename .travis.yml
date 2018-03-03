@@ -6,3 +6,10 @@ cache:
   directories:
     - '$HOME/.gradle'
     - '$HOME/.m2'
+
+notifications:
+  email:
+    recipients:
+      - marcus@fihlon.ch
+    on_success: always
+    on_failure: always
