@@ -6,6 +6,14 @@ image:https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg["gitmoji", 
 
 *This repository contains the source code of my live demo which is a part of my https://www.fihlon.ch/talks/abstracts/kotlin-ee/[Kotlin EE: Boost Your Productivity] talk.*
 
+== Build
+
+We use https://gradle.org/[Gradle] to build the two services. You can start the multi project build with just one command in the root folder:
+
+```bash
+./gradlew assemble
+```
+
 == Copyright and Licensing
 
 Copyright (C) 2018 Marcus Fihlon

@@ -1,0 +1,3 @@
+rootProject.name = 'kotlin-ee'
+include 'timeservice'
+include 'helloservice'
