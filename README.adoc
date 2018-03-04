@@ -14,6 +14,17 @@ We use https://gradle.org/[Gradle] to build the two services. You can start the 
 ./gradlew assemble
 ```
 
+== Docker
+
+To create the https://www.docker.org/[Docker] images for the two services, you have to run the following two commands:
+
+```
+docker build -t test/timeservice timeservice
+docker build -t test/helloservice helloservice
+```
+
+If you want to push these images to the https://hub.docker.com/[Docker Hub] registry, you can replace the `test` prefix with your own https://hub.docker.com/[Docker Hub] user or organization name.
+
 == Copyright and Licensing
 
 Copyright (C) 2018 Marcus Fihlon
