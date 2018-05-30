@@ -1,6 +1,6 @@
 /*
  * Hello Service
- * Copyright (C) 2017 Marcus Fihlon
+ * Copyright (C) 2017, 2018 Marcus Fihlon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@
 package ch.fihlon.talk.kotlinee.helloservice
 
 import java.net.InetAddress
-import java.net.UnknownHostException
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.PathParam
@@ -27,23 +26,17 @@ import javax.ws.rs.client.ClientBuilder
 import javax.ws.rs.client.WebTarget
 import javax.ws.rs.core.MediaType
 
-
-
 @Path("hello")
 @Produces(MediaType.TEXT_PLAIN)
-class HelloResource {
+class HelloService {
 
-    val timeservice: WebTarget = ClientBuilder.newClient()
-            .target("http://timeservice:8080")
-            .path("/api/time")
+    val timeservice : WebTarget = ClientBuilder.newClient().target("http://timeservice:8080").path("/api/time")
 
     @GET
-    @Path("{name}")
-    @Throws(UnknownHostException::class)
-    fun sayHello(@PathParam("name") name: String): String {
+    fun sayHello(@PathParam("name") name: String) : String {
         val time = timeservice.request(MediaType.TEXT_PLAIN).get(String::class.java)
         val hostname = InetAddress.getLocalHost().hostName
-        return "Hello ${name}\n${time}\n${hostname}\n"
+        return "Hello $name\n$time\$hostname\n"
     }
 
 }
