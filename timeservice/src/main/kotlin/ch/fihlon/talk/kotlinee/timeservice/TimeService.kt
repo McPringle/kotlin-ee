@@ -1,6 +1,6 @@
 /*
  * Time Service
- * Copyright (C) 2017 Marcus Fihlon
+ * Copyright (C) 2017, 2018 Marcus Fihlon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType
 
 @Path("time")
 @Produces(MediaType.TEXT_PLAIN)
-class TimeResource {
+class TimeService {
 
     @GET
     fun getTime() : String {
