@@ -1,6 +1,6 @@
 /*
  * Time Service
- * Copyright (C) 2017 Marcus Fihlon
+ * Copyright (C) 2018 Marcus Fihlon
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -42,9 +42,9 @@ dependencies {
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "$jvm_version"
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "$jvm_version"
 }
