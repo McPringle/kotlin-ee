@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]
+then
+  docker build -t mcpringle/timeservice timeservice/
+  docker build -t mcpringle/helloservice helloservice/
+  echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  docker push mcpringle/timeservice
+  docker push mcpringle/helloservice
+  docker logout
+fi

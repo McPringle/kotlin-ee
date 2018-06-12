@@ -13,3 +13,22 @@ notifications:
       - marcus@fihlon.ch
     on_success: always
     on_failure: always
+
+jdk:
+- oraclejdk8
+
+services:
+  - docker
+
+addons:
+  apt:
+    packages:
+    - oracle-java8-installer
+
+after_success:
+  - ./deploy
+
+env:
+  global:
+  - secure: LHRiBtnBC2NHAdGr7V8WtK4LeNYlSW2oJxmy3BifU6mmNF87pNI3bXR1jk8Rr7eEF9OePRxAuF0iU9UQsYqJ7M4IXKBLXBkuJi3kCWTvXJ5zsbSXQksR+qyEzTyuX3m2Q4OkQRywFntRH+BXfeouHKv5SyAe4gvqDRmVBe9T/EFnc2V4aZm/JGlipZd5q53dtm/lz2d3uCKCb2FyQ6qkeJq/ATtDslOGAb/EZ9PkUbd/9KKq6QdFeVZCYiBHeVCl2AfLqt51/GbjJgw/VelDM9wEEyKJ1EAYjYU5LrNuw3v5Yb8s3OJhp4KGh/nzZhslpz4pZWFO9i8iVXZJdzPIWjlr3Hk4UansqTJNTrpNmYGD4V4Udvw+w2EZkjKk5ehfnS+XRKrRIXiHUoCoTxuvrGX9rDCbHkzXWPqQzsvG3S7RQ2OgEoy1lxacjF0miLiHP5cgW4//+ikbplUpUZEQGGKIGYYYmu52yffASNasVEvcF4f7xYKcFpgVjeOCAw8ddbGnHwgrwoM/zotTc5oLzZpSEF+3q4diI85DsxnV59y12mHNcC7o6iKjSe+U5ExjHQ/jJE9umU5sp3EBJUbpoc1FrliVTRMjw3+9UBhNdVcEKny8ltvZzhsQY8zuPeKkY8JcGAwHQrb4juZS3UIMsmOMv+5YgkTgf1f22H8FYoI=
+  - secure: hVYvJ9tD9qm/BGUEwOfPhWS68iJRz2IEez3qG2soPilyQkQacPFv/OHxd/XaJ7gebN08uB3AXokWSbUYyx5KBJZJlTYyK7Rw7kkvUUYPD66SC4AcQ0VpOR+U/u2yU58hp9E8TW2vQYNtBHFHP+/I+yQFcMHs1B6TzvrCd6aYRlG4okLGaw/qlInHhWEsWd5BnClOmL18lBizHFjH9I85T/LmQm7CddfYOjunIXUPNfOFlXyEXZwt08fwYIF/X7vjmn/oB4XQxUnfLs2B0U9pFUH35rUzNd4ITlNPZfPzECEfERl6njOJuVdKMRF2KxvgF4dFtwtNmV2d3J++YzHfSuI51ms8QNbp6M/XeWa5HtGhC7hdUl+mtBl8TEgOrcbGCElkX6GqxEp5yqeEUfHnvH5lVU+VBjmeZ4Tmrw+76a3GGsvaJacMQckDfEmxK7VYXgOid2VVHDpRbbD6CBIJENKA3VbBUKnL94W+Qurh7RyvMURJseTxnkj4oFRkYWMxESRrGWJhbY4pdc0K7l8OEge04cLUBIzjP+gv9lIgSLNRFGor5VTD8pDv5YqN4dM7H7KSLKowv2ZYuAOAq73ioaX0kMUFVqI9yE+j2v0xOnRABwX8Y87Aa3k5GTIBPvoCYkKATUk5GRBFcXtKHPKDJy8jHDX0C5pIWAQXo3hy7Os=
