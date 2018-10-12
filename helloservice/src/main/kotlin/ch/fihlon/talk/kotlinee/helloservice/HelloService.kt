@@ -37,7 +37,7 @@ class HelloService {
     fun sayHello(@PathParam("name") name: String) : String {
         val time = timeservice.request(MediaType.TEXT_PLAIN).get(String::class.java)
         val hostname = InetAddress.getLocalHost().hostName
-        return "Hello $name\n$time\$hostname\n"
+        return "Hello $name\n$time\n$hostname\n"
     }
 
 }
