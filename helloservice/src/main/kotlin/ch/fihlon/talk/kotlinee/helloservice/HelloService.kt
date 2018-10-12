@@ -33,6 +33,7 @@ class HelloService {
     val timeservice : WebTarget = ClientBuilder.newClient().target("http://timeservice:8080").path("/api/time")
 
     @GET
+    @Path("{name}")
     fun sayHello(@PathParam("name") name: String) : String {
         val time = timeservice.request(MediaType.TEXT_PLAIN).get(String::class.java)
         val hostname = InetAddress.getLocalHost().hostName
