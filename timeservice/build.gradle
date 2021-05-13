@@ -33,12 +33,12 @@ noArg {
 }
 
 war {
-    archiveName 'timeservice.war'
+    archiveFileName = 'timeservice.war'
 }
 
 dependencies {
     providedCompile "javax:javaee-api:$javaee_version"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
 compileKotlin {
