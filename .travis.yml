@@ -17,16 +17,8 @@ notifications:
     on_success: always
     on_failure: always
 
-jdk:
-- oraclejdk8
-
 services:
   - docker
-
-addons:
-  apt:
-    packages:
-    - oracle-java8-installer
 
 after_success:
   - ./deploy
